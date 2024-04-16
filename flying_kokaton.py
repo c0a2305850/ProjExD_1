@@ -32,7 +32,7 @@ def main():
         else:
             kk_rct.move_ip((-1, 0))
 
-        x = -tmr%3200#練習6
+        x = tmr%3200#練習6
         screen.blit(bg_img, [-x, 0])
         screen.blit(bg_img2, [-x+1600, 0])
         screen.blit(bg_img, [-x+3200, 0])
