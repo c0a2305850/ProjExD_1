@@ -13,11 +13,15 @@ def main():
     tmr = 0
     kk_img = pg.image.load("fig/3.png")
     kk_img = pg.transform.flip(kk_img, True, False)
+    bg_img2 = pg.transform.flip(bg_img, True, False)#練習7,1
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
-        x = tmr%800#練習6
+        x = tmr%3200#練習6
         screen.blit(bg_img, [-x, 0])
+        screen.blit(bg_img2, [-x+1600, 0])
+        screen.blit(bg_img, [-x+3200, 0])
+        screen.blit(bg_img2, [-x+4800, 0])#練習7,2 横の長さの半分で割ると良い感じ
         screen.blit(kk_img, [300, 200])#練習4
         pg.display.update()
         tmr += 1        
